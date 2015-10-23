@@ -1,0 +1,2 @@
+load("/Users/aliki/Dropbox/myDataSci/DataScienceSpecialization/4. Exploratory_Data_Analysis/Course Projects/ExData2temp/Source_Classification_Code.rds")
+load("/Users/aliki/Dropbox/myDataSci/DataScienceSpecialization/4. Exploratory_Data_Analysis/Course Projects/ExData2temp/summarySCC_PM25.rds")
