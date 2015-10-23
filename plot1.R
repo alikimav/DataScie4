@@ -65,3 +65,15 @@ axis(side = 1, at = seq(0,7e06, 7))
 dev.off()
 
 #=====================================================================================================================
+
+#============================================== 4. Question 1   ======================================================
+
+# QUESTION 1: Have total emissions from PM2.5 decreased in the United States from 1999 to 2008?
+
+# ANSWER: We observe that the data we are given includes information on PM2.5 emissions every 3 years. While there is a 
+# monotonic decrease in the emissions, plot1.png depicts a larger decrease from PM2.5 emissions from years 1999 to 2002
+# and 2005 to 2008 compared to the years 2002 to 2005. 
+
+#=====================================================================================================================
+
+
