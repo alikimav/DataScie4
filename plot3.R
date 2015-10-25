@@ -1,8 +1,8 @@
 #---------------------------------------------------------------------------------------------------------------
   ## Exploratory Data Analysis: Course Project 2 (plot 3)
   
-  # The code in this .R file generates a barplot depicting the total emissions of PM2.5 per sources for each of
-  # the years 1999, 2002, 2005, 2008 in Baltimore City, Maryland.
+  # The code in this .R file generates a barplot depicting the total emissions of PM2.5 per source for each of
+  # the years 1999, 2002, 2005, 2008 in Baltimore City, Maryland. 
   
   #---------------------------------------------------------------------------------------------------------------
 
@@ -48,7 +48,9 @@ library(ggplot2)
 png(filename="plot3.png", width = 480, height = 480)
 g1 <- ggplot(aggdata, aes(x = factor(Year), y = Emissions, fill = factor(Type))) +
   geom_bar(color = "black", stat = "identity", position = position_dodge()) + scale_x_discrete("Year") +
-  scale_fill_discrete(name ="Source type", labels=c("Non-road", "Non-point", "On-road", "Point")) 
+  scale_fill_discrete(name ="Source type", labels=c("Non-road", "Non-point", "On-road", "Point"))+
+  ggtitle("PM2.5 emissions per source type in Baltimore City, MD")+
+  ylab("PM2.5 emissions [tons]")+facet_wrap(~ Type)
 # +scale_fill_brewer(palette = "Set1")
 # stat_summary(fun.y=max, geom = "line", mapping = aes(group = 1), color = "black")
 print(g1)
@@ -56,5 +58,17 @@ dev.off()
 
 #=====================================================================================================================
 
-  
+#============================================== 4. Question 3   ======================================================
+
+# QUESTION 3: Of the four types of sources indicated by the type (point, nonpoint, onroad, nonroad) variable, which of 
+# these four sources have seen decreases in emissions from 1999–2008 for Baltimore City?
+# Which have seen increases in emissions from 1999–2008?
+
+# ANSWER: The bar plot in plot3.png, depicts the amount of PM2.5 emissions per year recorded grouped by source type. Both
+# the non-point (green) and on-road (teal) sources have shown a decreasing trend. The non-road source has also seen a decrease
+# in the PM2.5 emission levels between 1999 and 2008; however a slight increase was observed from 2002 and 2005. As illustrated
+# in plot3.png, the point source PM2.5 emissions saw a steady increase between 1999 and 2005 with a significant decrease observed in 2008. However, despite the
+# decrease between 2005 and 2008, the point source emission in 2008 was higher than the amount measured in 1999.
+
+#=====================================================================================================================
 
